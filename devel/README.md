@@ -1,3 +1,6 @@
 # Instructions for Running my Project
 
-Replace this text with the instructions your classmates will need to run your project. If your code needs any libraries using `pip` or any other tool, those instructions should be here as well. A complete stranger should be able to follow these instructions, so don't be afraid to include videos, screenshots, diagrams, text, whatever helps!
+First off you should install Python, the link is here: https://www.python.org/downloads/ . 
+You should open the code/copy and paste it into the document and hit run and then run module. 
+You may then begin.
+
