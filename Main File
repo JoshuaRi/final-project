@@ -1,0 +1,74 @@
+from random import randint
+class Main:
+	balance = 100
+	loanA = 1000
+	income = 0
+	month = 0
+	def test():
+		x = input('What is your action')
+		if(x=="loan"):
+			Main.loan()
+		elif(x=="invest"):
+			Main.invest()
+		elif(x=="skip"):
+			Main.skip()
+		else:
+			print("Invalid argument")
+			test()
+		
+	def loan():
+		x = int(input('Type the desired loan amount'))
+		if(x<Main.loanA):
+			Main.balance=Main.balance+x
+			Main.loanA=Main.loanA-x
+		else:
+			print("You can'loan that much")
+			Main.test()
+	def invest():
+		x = input('Invest secure or risk')
+		if(x=="secure"):
+			Main.investS()
+		elif(x=="risk"):
+			Main.investR()
+	def investS():
+		amount = int(input('How much do you want to invest?'))
+		if(amount<=Main.balance):
+			Main.balance=Main.balance-amount
+			random =randint(0,10)
+			if(random<=8):
+				Main.income=amount*1.10
+				print("You successfully invested and your income is %d" % Main.income)
+			else:
+				print("You lost your money")
+		else:
+			print("Insufficient amount")
+			Main.investS()
+	def investR():
+		amount = int(input('How much do you want to invest?'))
+		if(amount<=Main.balance):
+			Main.balance=Main.balance-amount
+			random =randint(0,10)
+			if(random>=8):
+				print("You successfully invested and your income is %d" % Main.income)
+				Main.income=Main.amount*1.8
+			else:
+				print("You lost your money")
+		else:
+			print("Insufficient amount")
+			Main.investR()
+		
+	def skip():
+		print("You skipped your month")
+
+while Main.balance>=0 or Main.month==40:
+	print ("%d month passed" % Main.month)
+	print ("Your balance: %d" % Main.balance)
+	print ("Available loan: %d" % Main.loanA)
+	print ("Your income: %d" % Main.income)
+	Main.balance+=Main.income
+	Main.test()
+	Main.month+=1
+if(Main.balance<0):
+	print("You went bankrupt")
+else:
+	print("You made %d money" % Main.balance)
