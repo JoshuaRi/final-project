@@ -22,7 +22,7 @@ class Bank:
 			self.skip()
 		else:
 			print("Invalid argument")
-			self.test() # this is a recursion, basically a method that calls itself, if the user is BrokeBack
+			self.test() # this is a recursion, basically a method that calls itself, if the user is typing a invalid command.
 		
 	def loan(self): 
 		print ('Type the desired loan amount')
@@ -65,7 +65,7 @@ class Bank:
 	def getLoanA(self):
 		return self.loanA
 bank = Bank()
-while bank.getBalance()>=0 or bank.getMonth()==40: # if the user has negative money or 40 months has passed then escape the loop
+while bank.getBalance()>=0 or bank.getMonth()==40: # if the user has negative money or 40 months has passed then finish the game.
 	print ("%d month passed" % bank.getMonth())
 	print ("Your balance: %d" % bank.getBalance())
 	print ("Available loan: %d" % bank.getLoanA())
@@ -76,7 +76,7 @@ while bank.getBalance()>=0 or bank.getMonth()==40: # if the user has negative mo
 	month = bank.getMonth()
 	month+=1 # increments every month
 if(bank.getBalance()<0):
-	print("You went bankrupt") #prints if the user went minus
+	print("You went bankrupt") #prints if the user went minus ( out of money )
 else:
 	print("You made %d money" % bank.getBalance()) # prints the balance
 
