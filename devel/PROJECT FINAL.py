@@ -12,7 +12,7 @@ class Bank:
 	income = 0
 	month = 0
 	def test(self): #main execution
-		print ('What is your action? (invest,loan,skip')
+		print ('What is your action? (invest,loan,skip')')
 		x = input('')
 		if(x=="loan"): # if loan then jump to method loan
 			self.loan()
