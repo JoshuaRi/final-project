@@ -1,0 +1,5 @@
+At the start of my project, I did not know what to specifically implement, as I thought of it I simplified it. So I thought of different
+kinds of investments such as "risk" and "secure" where risk will have more payoff but will of course be more riskier. As well as the idea
+of loans my initial plan seemed to complicated so I made it more simple by just having a max amount you can loan, with no need to actually
+pay back in return. The original goal was to keep your money until a certain amount of days which I put to "40 months" which seems like
+a good amount of time for a quick game.
